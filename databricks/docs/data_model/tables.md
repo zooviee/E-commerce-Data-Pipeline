@@ -60,11 +60,11 @@ Standard time dimension for all fact tables.
 
 # gld_fact_order_items
 
-Grain: One row per order item
-- Foreign Keys:
--- product_id → gld_dim_products
--- customer_id → gld_dim_customers
--- date_id → gld_dim_date
+Grain: One row per order item.
+Foreign Keys:
+- product_id → gld_dim_products
+- customer_id → gld_dim_customers
+- date_id → gld_dim_date
 
 | Column          | Type   | Description            |
 | --------------- | ------ | ---------------------- |
@@ -102,7 +102,7 @@ Optimized for KPI dashboards and trend analysis.
 
 # gld_fact_order_returns
 
-Grain: One row per returned order
+Grain: One row per returned order.
 Composite Keys:
 - order_id 
 - order_dt 
@@ -124,10 +124,10 @@ Supports return behavior analysis and operational efficiency metrics.
 
 # gld_fact_order_shipments
 
-Grain: One row per shipment
-- Composite Keys:
--- order_id
--- shipment_id 
+Grain: One row per shipment.
+Composite Keys:
+- order_id
+- shipment_id 
 
 | Column              | Type    | Description           |
 | ------------------- | ------- | --------------------- |
