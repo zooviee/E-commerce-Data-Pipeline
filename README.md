@@ -50,7 +50,7 @@ This project implements a modern Lakehouse architecture on Azure using Databrick
    * Only curated business-ready tables are exposed to analysts and stakeholders.
 
 <p align="center">
-  <img src="docs/architecture/project_architecture.png" width="800"/>
+  <img src="databricks/docs/architecture/project_architecture.png" width="800"/>
 </p>
 
 ---
@@ -85,7 +85,7 @@ The Power BI report consumes data from the **Gold layer** and provides end-to-en
 * KPI summary cards for executive dashboards
 
 <p align="center">
-  <img src="docs/screenshots/ecommerce_analytics_report.jpg" width="900"/>
+  <img src="powerbi/screenshots/ecommerce_analytics_report.jpg" width="900"/>
 </p>
 
 ---
