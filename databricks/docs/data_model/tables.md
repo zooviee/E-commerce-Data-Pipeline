@@ -7,7 +7,7 @@ These tables power Power BI dashboards and support business metrics.
 # gld_dim_customers
 
 Grain: One row per customer
-Primary Key: customer_id
+- Primary Key: customer_id
 
 | Column      | Type   | Description                |
 | ----------- | ------ | -------------------------- |
@@ -24,7 +24,7 @@ Stores customer master data for segmentation and geographic analysis.
 # gld_dim_products
 
 Grain: One row per product
-Primary Key: product_id
+- Primary Key: product_id
 
 | Column        | Type   | Description               |
 | ------------- | ------ | ------------------------- |
@@ -36,14 +36,14 @@ Primary Key: product_id
 | size          | string | Product size              |
 | material      | string | Product material          |
 
-Purpose:
+Purpose: 
 Provides product attributes for sales and inventory analytics.
 
 
 # gld_dim_date
 
 Grain: One row per date
-Primary Key: date_id
+- Primary Key: date_id
 
 | Column     | Type   | Description        |
 | ---------- | ------ | ------------------ |
@@ -54,17 +54,17 @@ Primary Key: date_id
 | day_name   | string | Day of week        |
 | is_weekend | int    | Weekend indicator  |
 
-Purpose:
+Purpose: 
 Standard time dimension for all fact tables.
 
 
 # gld_fact_order_items
 
 Grain: One row per order item
-Foreign Keys:
-- product_id → gld_dim_products
-- customer_id → gld_dim_customers
-- date_id → gld_dim_date
+- Foreign Keys:
+-- product_id → gld_dim_products
+-- customer_id → gld_dim_customers
+-- date_id → gld_dim_date
 
 | Column          | Type   | Description            |
 | --------------- | ------ | ---------------------- |
@@ -125,9 +125,9 @@ Supports return behavior analysis and operational efficiency metrics.
 # gld_fact_order_shipments
 
 Grain: One row per shipment
-Composite Keys:
-- order_id
-- shipment_id 
+- Composite Keys:
+-- order_id
+-- shipment_id 
 
 | Column              | Type    | Description           |
 | ------------------- | ------- | --------------------- |
