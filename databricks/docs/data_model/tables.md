@@ -6,7 +6,7 @@ These tables power Power BI dashboards and support business metrics.
 
 # gld_dim_customers
 
-Grain: One row per customer
+Grain: One row per customer<br>
 - Primary Key: customer_id
 
 | Column      | Type   | Description                |
@@ -23,7 +23,7 @@ Stores customer master data for segmentation and geographic analysis.
 
 # gld_dim_products
 
-Grain: One row per product
+Grain: One row per product<br>
 - Primary Key: product_id
 
 | Column        | Type   | Description               |
@@ -36,13 +36,13 @@ Grain: One row per product
 | size          | string | Product size              |
 | material      | string | Product material          |
 
-Purpose: 
+Purpose:<br>
 Provides product attributes for sales and inventory analytics.
 
 
 # gld_dim_date
 
-Grain: One row per date
+Grain: One row per date<br>
 - Primary Key: date_id
 
 | Column     | Type   | Description        |
@@ -54,14 +54,14 @@ Grain: One row per date
 | day_name   | string | Day of week        |
 | is_weekend | int    | Weekend indicator  |
 
-Purpose: 
+Purpose:<br>
 Standard time dimension for all fact tables.
 
 
 # gld_fact_order_items
 
-Grain: One row per order item.
-Foreign Keys:
+Grain: One row per order item.<br>
+Foreign Keys:<br>
 - product_id → gld_dim_products
 - customer_id → gld_dim_customers
 - date_id → gld_dim_date
@@ -78,7 +78,7 @@ Foreign Keys:
 | tax_amount      | int    | Tax charged            |
 | net_amount      | double | Final payable amount   |
 
-Purpose:
+Purpose:<br>
 Core sales fact table used for revenue, volume, and discount analysis.
 
 
@@ -96,14 +96,14 @@ Grain: One row per date and currency
 | total_tax_amount      | bigint | Total tax collected          |
 | total_amount          | double | Final revenue                |
 
-Purpose:
+Purpose:<br>
 Optimized for KPI dashboards and trend analysis.
 
 
 # gld_fact_order_returns
 
-Grain: One row per returned order.
-Composite Keys:
+Grain: One row per returned order.<br>
+Composite Keys:<br>
 - order_id 
 - order_dt 
 - return_ts
@@ -124,8 +124,8 @@ Supports return behavior analysis and operational efficiency metrics.
 
 # gld_fact_order_shipments
 
-Grain: One row per shipment.
-Composite Keys:
+Grain: One row per shipment.<br>
+Composite Keys:<br>
 - order_id
 - shipment_id 
 
@@ -137,7 +137,7 @@ Composite Keys:
 | carrier_group       | string  | Carrier category      |
 | is_weekend_shipment | boolean | Weekend shipment flag |
 
-Purpose:
+Purpose:<br>
 Used for logistics and delivery performance analytics.
 
 
