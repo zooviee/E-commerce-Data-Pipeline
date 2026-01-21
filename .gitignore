@@ -1,0 +1,67 @@
+# --------------------
+# OS / System files
+# --------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+venv/
+
+# --------------------
+# Jupyter / Databricks
+# --------------------
+.ipynb_checkpoints/
+*.dbc
+
+# --------------------
+# Config (real secrets)
+# --------------------
+config/config.yml
+config/*.secret.yml
+
+# --------------------
+# Power BI
+# --------------------
+*.pbix
+*.pbit
+
+# --------------------
+# Data files
+# --------------------
+*.csv
+*.parquet
+*.json
+*.avro
+*.delta
+data/
+sample_data/private/
+
+# --------------------
+# Logs
+# --------------------
+*.log
+logs/
+
+# --------------------
+# IDEs
+# --------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --------------------
+# Temporary files
+# --------------------
+tmp/
+temp/
