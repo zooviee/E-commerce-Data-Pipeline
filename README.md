@@ -90,7 +90,7 @@ The Power BI report consumes data from the **Gold layer** and provides end-to-en
 
 ---
 
-## 🧠 Design Principles Demonstrated
+##  Design Principles Demonstrated
 
 * Medallion Lakehouse Architecture
 * Secure cloud data access (no secrets in code)
